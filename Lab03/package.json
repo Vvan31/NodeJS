@@ -1,0 +1,17 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Lab 03 express router",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "vvan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.22"
+  }
+}
