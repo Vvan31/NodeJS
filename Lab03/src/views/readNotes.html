@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public\style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Notes</title>
 </head>
 <body>
     <h1>Notes</h1>
-    <a href="http://localhost:3000/">Home</a>
+    <button onclick="location.href='http://localhost:3000/'"' type="button">
+        <span class="button_top"> Home
+        </span>
+      </button>
+    <div class='card_stack'>
+        <script>
+            // Access the JSON data passed from the server
+            const jsonData = JSON.parse('<%- JSON.stringify(jsonData) %>');
+            
+            const cardStack = document.querySelector('.card_stack');
+            // Display the contents of the JSON file
+            for (const item of jsonData) {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = document.createElement('h2');
+                title.textContent = item.title;
+                title.className = 'note-title';
+                card.appendChild(title);
+
+                const p = document.createElement('p');
+                p.className = 'note-content';
+                p.textContent = item.content;
+                card.appendChild(p);
+                cardStack.appendChild(card);
+            }
+        </script>
+      
+    </div>
 </body>
 </html>

@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public\style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Add Note</title>
 </head>
 <body>
-    <h1>Add Note</h1>
-    <form action="/new-note" method="POST">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        <label for="content">Content</label>
-        <textarea name="content" id="content" cols="30" rows="10" required></textarea>
-        <button type="submit">Add Note</button>
-    </form>
-    <a href="http://localhost:3000/">Home</a>
-    <a href="http://localhost:3000/read-notes">All Notes</a>
+    <div class="container">
+         <h1>Add Note</h1>
+        <form action="/new-note" method="POST">
+            <label for="title">Title</label>
+            <div class="input-wrapper">
+                <input type="text" placeholder="Note title" id="title" name="title" class="input" required>
+              </div>
+           <!--  <input type="text" name="title" id="title" required> -->
+            <label for="content">Content</label>
+
+            <div class="input-wrapper">
+            <input class="input" name="content" placeholder="Note content" id="content" cols="30" rows="10" required></input>
+            </div>
+
+            <button type="submit" class="button"><span class="button_top"> Add note </span></button>
+        </form>
+    </div>
+    <br>
+    <button onclick="location.href='http://localhost:3000/'"' type="button">
+        <span class="button_top"> Home </span>
+    </button>
 </body>
 </html>
