@@ -5,9 +5,12 @@ const bodyParser = require('body-parser')
 /* ---------------------------- setups and config --------------------------- */
 const app = express()
 
+//use ejs 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, 'views'));
 
+app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, 'public')))
 
 /* ------------------------------- middleware ------------------------------- */
 app.use('/api/members', require('./routes/members'))
