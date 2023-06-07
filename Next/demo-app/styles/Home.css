@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
